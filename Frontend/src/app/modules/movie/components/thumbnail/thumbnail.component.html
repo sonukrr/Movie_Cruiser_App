@@ -1,0 +1,24 @@
+<!-- <img [src]="movie?.poster_path" [alt]="movie?.title"> -->
+
+<mat-card class="movie-thumbnail">
+  <mat-card-header class="movie-header">
+    <mat-card-title class="movieTitle">{{movie?.title}}</mat-card-title>
+    <mat-card-subtitle class="movie-subtitle">{{movie?.release_date}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="movie-image" [src]="movie?.poster_path" [alt]="movie?.title">
+  <mat-card-content>
+    <div *ngIf="!useWatchlistApi; else elseblock" class="movie-overview">
+      <p>{{movie.overview}}</p>
+    </div>
+    <ng-template #elseblock>
+      <p>
+        <strong>Movie ID :</strong> {{movie.id}}</p>
+    </ng-template>
+  </mat-card-content>
+  <mat-card-actions class="movie-actions">
+    <button *ngIf="!useWatchlistApi" class="addButton" mat-raised-button color="primary" mat-button (click)="addToWatchList()">Add to watchlist</button>
+    <button *ngIf="useWatchlistApi" mat-raised-button color="primary" mat-button (click)="deleteFromWatchList()">Delete</button>
+    <button *ngIf="useWatchlistApi" mat-raised-button color="primary" mat-button (click)="updateFromWatchList('update')" align="end">Update</button>
+
+  </mat-card-actions>
+</mat-card>

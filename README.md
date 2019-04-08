@@ -1,0 +1,1 @@
+This is a moviecruiser application.Here you will find almost every movie and add them to your watchlist.

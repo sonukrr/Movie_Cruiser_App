@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>MOVIE CRUISER</span> 
+    <button mat-button [routerLink]="['/movies/popular']">Popular movies</button>
+    <button mat-button [routerLink]="['/movies/top_rated']">Top rated movies</button>
+    <button mat-button [routerLink]="['/movies/watchlist']">My Watchlist</button>
+    <button mat-button class="search-button" [routerLink]="['/movies/search']">Search</button>
+    <button mat-button (click)="logOut()">Logout</button>
+
+</mat-toolbar>
+<router-outlet></router-outlet>

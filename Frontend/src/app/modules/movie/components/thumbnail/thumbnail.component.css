@@ -1,0 +1,35 @@
+.movie-thumbnail{
+    width:250px;
+    margin:0px 10px;
+    border:1px solid blueviolet;
+    
+}
+
+.movie-image{
+    margin-top: 1px;
+    height: 290px;
+    
+    
+}
+.movie-overview{
+    height: 65px;
+    overflow-x: hidden;
+    overflow-y:auto;
+
+}
+
+.movie-overview::-webkit-scrollbar{
+    width: 2px;
+    background: gray;
+}
+.movie-title{
+    
+   height: 49px;
+    overflow: hidden;
+   
+}
+
+.movie-actions{
+text-align: right;
+}
+

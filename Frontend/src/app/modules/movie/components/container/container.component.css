@@ -1,0 +1,13 @@
+
+
+.movie-container{
+    margin:auto;
+    display:flex;
+    overflow-x: auto;
+    margin: 20px 80px;
+    
+
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
